@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "NODE_ENV=production rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.js --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "rollup": "^2.26.11",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-serve": "^1.0.4"
+  },
+  "optionalDependencies": {
+    "win-node-env": "^0.4.0"
+  }
+}
