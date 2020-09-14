@@ -1,0 +1,41 @@
+.c-tab-menu {
+  $g-transition-duration: 0.4s;
+  $g-transition-timing: ease;
+  $color-primary: blue;
+
+  display: flex;
+  align-items: center;
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding-right: px-to-rem(24px);
+    font-weight: 600;
+
+    &::after {
+      position: absolute;
+      bottom: px-to-rem(-4px);
+      left: 0;
+      width: 32%;
+      height: px-to-rem(2px);
+      background-color: $color-primary;
+      content: '';
+      transform: scaleY(0);
+      transition: transform $g-transition-duration $g-transition-timing;
+    }
+
+    &:hover,
+    &.is-active {
+      color: $color-primary;
+
+      &::after {
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+
+.u-display-none {
+  display: none;
+}
